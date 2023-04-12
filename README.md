@@ -1,12 +1,15 @@
 # E46-Instrument-cluster-ESP8266
 - E46 Instrumental cluster controlled with ESP8266 over WiFi UDP game telemetry
+- If wanted, I'm willing to make plug&play PCB with ESP32-S2 that will plug into the cluster connector, also with ability to control over serial/USB
+- I'm not planning to implement this into SimHub custom hardware, if you want to, you can do it yourself and you're free to source from this code **OR** you can simply fordward the UDP data in SimHub configuration to the ESP
 ## Working games:
 - Any Forza game (port: 8080)
-- BeamNG.drive /OutGauge protocol (port: 8000)
-## Future to work games:
-- ETS2
-- Suggest more or make pull request
-## Working:
+- BeamNG.drive / OutGauge protocol (port: 8000)
+  ### Future to work games:
+  - ETS2
+  - Assetto Corsa
+  - ...or make pull request with needed code
+## Working instrument functions:
 - Handbrake/parkbrake engagement
 - Traction control light
 - Blinkers, highbeam
@@ -15,16 +18,10 @@
 - Coolant temperature
 - Fuel level (needs DACs, opamp and resistors, working, check schema)
 - Fuel consumption (in reality not true, being faked, check code)
-## Easy to implement via CAN or KBUS but not used in much games with telemetry:
-- Check engine light, fog lights, oil/coolant temp light, cruise light...
-## Harder to implement, needs ESP32 because of lack of pins on 8266:
-- Airbag light, battery charge fault, control illumination of cluster...
-## How to build:
-- Edit wifi credentials in .ino file
-- Upload code to ESP
-- Connect everything according to schema or header of .ino file
-- Connect to power
-- Start game and edit telemetry configuration
+  ### Easy to implement via CAN or KBUS but not used in much games with telemetry:
+  - Check engine light, fog lights, oil/coolant temp light, cruise light...
+  ### Harder to implement, needs ESP32 because of lack of pins on 8266:
+  - Airbag light, battery charge fault, control illumination of cluster...
 ## Used material to build:
 - ESP8266
 - MCP2515 CAN board (w/TJA1050)
@@ -33,6 +30,12 @@
   - 2x MCP4725 DAC
   - LM358 opamp
   - 2x 120R resistor
+  ### How to build:
+  - Edit wifi credentials in .ino file
+  - Upload code to ESP
+  - Connect everything according to schema or header of .ino file
+  - Connect to power
+  - Start game and edit telemetry configuration
 ## Used references:
 - https://www.ms4x.net/index.php?title=Siemens_MS43_CAN_Bus
 - https://github.com/tsharp42/E46ClusterDriver
