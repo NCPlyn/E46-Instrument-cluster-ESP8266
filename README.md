@@ -1,4 +1,5 @@
 # E46-Instrument-cluster-ESP8266
+- Video of this working: https://youtu.be/MROyCdkAhm4
 - E46 Instrumental cluster controlled with ESP8266 over WiFi UDP game telemetry
 - If wanted, I'm willing to make plug&play PCB with ESP32-S2 that will plug into the cluster connector, also with ability to control over serial/USB
 - I'm not planning to implement this into SimHub custom hardware, if you want to, you can do it yourself and you're free to source from this code **OR** you can simply fordward the UDP data in SimHub configuration to the ESP
