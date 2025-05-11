@@ -1,3 +1,4 @@
+## !! If you want to see which CAN/K-BUS messages to send to control the cluster, check my implementation here: [r00li/CarCluster-BMWe46](https://github.com/r00li/CarCluster/blob/main/CarCluster/src/Clusters/BMW_E46/BMWE46Cluster.cpp) !!
 # E46-Instrument-cluster-ESP8266
 - Video of this working: https://youtu.be/MROyCdkAhm4
 - E46 Instrumental cluster controlled with ESP8266 over WiFi UDP game telemetry
